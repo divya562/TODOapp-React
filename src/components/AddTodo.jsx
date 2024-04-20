@@ -1,7 +1,9 @@
+import { useContext } from "react";
+import { TodoItemcontext } from "../store/todo-items-store";
 import { useRef } from "react";
 
-const Addtodo = ({addNewItem}) =>{
-  
+const Addtodo = () =>{
+  const {addNewItem}= useContext(TodoItemcontext)
 
   const todoNameElement=useRef();
   const dueDateElement=useRef();
